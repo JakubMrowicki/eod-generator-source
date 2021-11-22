@@ -103,6 +103,13 @@ export default function Booth(props) {
                                             }
                                         });
                                     }}
+                                    onBlur={({target}) => {
+                                        if (target.value === '') {
+                                            setVo(prevState => {
+                                                return { ...prevState, credit: 0 };
+                                            });
+                                        }
+                                    }}
                                 />
                             </div>
                             <label>Debit Card</label>
@@ -122,6 +129,13 @@ export default function Booth(props) {
                                                 return { ...prevState, debit: +val };
                                             }
                                         });
+                                    }}
+                                    onBlur={({target}) => {
+                                        if (target.value === '') {
+                                            setVo(prevState => {
+                                                return { ...prevState, debit: 0};
+                                            });
+                                        }
                                     }}
                                 />
                             </div>
@@ -143,6 +157,13 @@ export default function Booth(props) {
                                             }
                                         });
                                     }}
+                                    onBlur={({target}) => {
+                                        if (target.value === '') {
+                                            setVo(prevState => {
+                                                return { ...prevState, payzone: 0};
+                                            });
+                                        }
+                                    }}
                                 />
                             </div>
                             <label>Mobile Payment</label>
@@ -162,6 +183,13 @@ export default function Booth(props) {
                                                 return { ...prevState, mobile: +val };
                                             }
                                         });
+                                    }}
+                                    onBlur={({target}) => {
+                                        if (target.value === '') {
+                                            setVo(prevState => {
+                                                return { ...prevState, mobile: 0};
+                                            });
+                                        }
                                     }}
                                 />
                             </div>
@@ -183,6 +211,13 @@ export default function Booth(props) {
                                             }
                                         });
                                     }}
+                                    onBlur={({target}) => {
+                                        if (target.value === '') {
+                                            setVo(prevState => {
+                                                return { ...prevState, cardmachine: 0};
+                                            });
+                                        }
+                                    }}
                                 />
                             </div>
                         </div>
@@ -203,6 +238,13 @@ export default function Booth(props) {
                                         }
                                     });
                                 }}
+                                onBlur={({target}) => {
+                                    if (target.value === '') {
+                                        setVo(prevState => {
+                                            return { ...prevState, exp1: 0};
+                                        });
+                                    }
+                                }}
                             />
                             <label>EXP 2</label>
                             <input 
@@ -218,6 +260,13 @@ export default function Booth(props) {
                                             return { ...prevState, exp2: +val };
                                         }
                                     });
+                                }}
+                                onBlur={({target}) => {
+                                    if (target.value === '') {
+                                        setVo(prevState => {
+                                            return { ...prevState, exp2: 0};
+                                        });
+                                    }
                                 }}
                             />
                             <label>EXP Difference</label>
@@ -236,6 +285,13 @@ export default function Booth(props) {
                                                 return { ...prevState, diff: +val };
                                             }
                                         });
+                                    }}
+                                    onBlur={({target}) => {
+                                        if (target.value === '') {
+                                            setVo(prevState => {
+                                                return { ...prevState, diff: 0};
+                                            });
+                                        }
                                     }}
                                 />
                             </div>
